@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>纯唇欲动 - 中文唇语识别交流系统</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?0b90ea16e8fcafb14906d99337fafdf2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="useragent" id="useragent">
+        <br>
+        <h1>Sorry</h1>
+        <hr> 「纯唇欲动」不支持微信/QQ端打开，
+        <br>请点击右上角菜单按钮，
+        <br>使用
+        <b>其他浏览器</b>打开。
+    </div>
+
+    <div class="content_header">
+        <span>纯唇欲动 - 中文唇语识别交流系统 Demo</span>
+    </div>
+
+    <div id="alert_camera" class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+        <strong>Error ! </strong>你没有授权或系统无法调用摄像头，详情点击下方「为什么“无法调用摄像头”？」
+    </div>
+
+    <div id="alert_net" class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+        </button>
+        <strong>Error ! </strong>网络状况不佳，请检查网络连接。
+    </div>
+
+    <div class="content_body">
+        <div class="content_1">
+            <video playsinline muted id="img_camera" class="img_camera" height="150">
+            </video>
+            <img src="./img/人脸识别.png" id="img_hint" class="img_hint" alt="">
+            <canvas id="img_canvas" class="img_canvas" width="200"></canvas>
+        </div>
+        <div class="content_2">
+            <div class="data_result" id="data_result">
+                你要说的是不是：
+                <br> “ &nbsp;
+                <span id="data_char" class="data_char">未开摄像头</span>&nbsp; ”
+            </div>
+        </div>
+        <div class="content_3">
+            <div class="content_span">
+                <div class="btn_group">
+                    <a name="" id="btn_submit" class="btn btn-primary" href="#" role="button">是哒</a>
+                    <a name="" id="data_delete" class="btn btn-primary" href="#" role="button">删掉</a>
+                </div>
+                <div class="row">
+                    <input type="text" class="data_tts col-7 offset-2" id="data_tts">
+                    <div class="col-3">
+                        <a name="" id="data_play" class="btn btn-primary" href="#" role="button">播放</a>
+                    </div>
+                </div>
+                <audio src="" id="data_sound"></audio>
+            </div>
+        </div>
+    </div>
+
+    <div class="content_footer">
+        <div class="content_span">
+            <a name="" id="btn_help" class="" href="#" role="button" data-toggle="popover" title="帮助" data-content="首先请检查浏览器权限，是否允许调用摄像头。另外，iOS端要注意关闭「省电模式」并且系统要求iOS11及以上。Android端因为各个品牌内置浏览器内核版本不同，请使用最新版Chrome或其他Blink\WebKit内核的浏览器。本项目基于webRTC实现。"
+                data-placement="top" data-trigger="focus" tabindex="0">为什么“无法调用摄像头”？</a>
+            <br> Demo版目前仅支持“你”“好”两个字，敬请期待。
+            <br> &copy; 法克瓜 2018 | 提交bug：
+            <a href="https://github.com/FakeGua">GitHub</a> | 人脸识别：
+            <a href="https://www.faceplusplus.com.cn">Face++</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="./secret.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
